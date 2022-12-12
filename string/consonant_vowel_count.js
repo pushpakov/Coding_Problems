@@ -22,3 +22,30 @@ function counterFreq(str){
 
 console.log(counterFreq(str))
 
+
+// Method 2 using charcount
+
+function countConsonantVowel(str){
+    let vowel="aeiouAEIOU"
+    let vowelCount=0
+    let consonant=0
+  
+    for(let i=0;i<str.length;i++){
+      let temp=str[i].charCodeAt(0)
+        if(vowel.includes(str[i])){
+          vowelCount++
+          continue;
+        }
+        else if((temp<65 || temp>122 )&& (temp<97 || temp>90) ){
+          continue;
+        }else{
+          consonant++
+        }
+    }
+    return{
+       vowelCount,
+       consonant
+    }
+  }
+  console.log(countConsonantVowel(str));
+  
