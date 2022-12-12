@@ -34,7 +34,7 @@ function freqInDesc(str){
     }
     let arr1 =  ((arr.join(" ")).split(" "))
     for(let k=0;k<arr1.length;k++){
-        let res = arr1[k].replace(","," : ")
+        let res = arr1[k].replace(","," - ")
         console.log(res) 
     }
 }
