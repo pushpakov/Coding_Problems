@@ -1,5 +1,4 @@
-// Make an inorder tree using given array.
-
+// print level order traversal
 
 class Node{
     constructor(val){
@@ -20,18 +19,24 @@ function constructTree(arr,i){
         }
         return root;
 }
-let res = []
+let root = (constructTree(arr,0))
 
-function inOrder(root){
-    if(root!==null){
-        inOrder(root.left)
-        res.push(root.val)
-        inOrder(root.right)
+let array = []
+function levelOrder(root){
+    let queue = []
+    queue.push(root)
+    while(queue.length !==0){
+        let m = queue.shift()
+        array.push(m.val)
+        if(m.left !== null){
+            queue.push(m.left)
+        }
+        if(m.right !== null){
+            queue.push(m.right)
+        }
     }
-    return res
+    return array
 }
-let root = constructTree(arr,0)
-console.log(root)
-console.log(inOrder(root))
 
+console.log(levelOrder(root))
 
