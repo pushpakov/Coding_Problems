@@ -15,7 +15,7 @@ function insertion_sort(A) {
     return A
 }
 
-console.log(insertion_sort([7,5,1,2,0,45,12,11,66]))
+// console.log(insertion_sort([7,5,1,2,0,45,12,11,66]))
 
 
 
@@ -32,4 +32,19 @@ function iinsertions(arr){
 }
 
 let arr = [22,11,4,25,87,111,32,4]
-console.log(iinsertions(arr))
+// console.log(iinsertions(arr))
+
+
+
+function insertion(arr){
+    for(let i =0;i<arr.length;i++){
+        for(let j =i;j>=0;j--){
+            if(arr[j+1] < arr[j]){
+                [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
+            }
+        }
+    }
+    return arr
+}
+
+console.log(insertion(arr))

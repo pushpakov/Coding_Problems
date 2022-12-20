@@ -23,8 +23,11 @@
 
 
 // swap using ES6 
-function bubbles(arr){
-    for(let i =0;i<arr.length-1;i++){
+
+let arr = [ 12, 44, 54, 85, 124,122,56,14,11]
+
+function bubble(arr){
+    for(let i=0;i<arr.length-1;i++){
         let swap = false
         for(let j=0;j<arr.length-1-i;j++){
             if(arr[j]>arr[j+1]){
@@ -32,19 +35,12 @@ function bubbles(arr){
                 swap = true
             }
         }
-        if(swap==false) break
+        if(swap!==true) break;
     }
     return arr
 }
 
-let arr = [ 12, 44, 54, 85, 124,122,56,14,11]
-
-
-console.log(bubbles(arr))
-
-
-
-
+console.log(bubble(arr))
 
 
 
